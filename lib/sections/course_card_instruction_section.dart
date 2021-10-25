@@ -9,17 +9,27 @@ class instructor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(8),
+      margin: EdgeInsets.all(10),
       child: Wrap(
         crossAxisAlignment: WrapCrossAlignment.center,
-        spacing: 8,
+        spacing: 10,
         children: [
           CircleAvatar(
-            maxRadius: 12,
+            maxRadius: 18,
             backgroundImage: NetworkImage(Courses.course[index].inst_img),
           ),
           Text(Courses.course[index].inst_name),
-          ElevatedButton(onPressed: () {}, child: Text('View All courese')),
+          SizedBox(
+            height: 5,
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text(
+              'View All courese',
+              style: TextStyle(fontSize: 12),
+            ),
+            style: ElevatedButton.styleFrom(),
+          ),
         ],
       ),
     );

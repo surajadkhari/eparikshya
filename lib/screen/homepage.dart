@@ -32,7 +32,7 @@ class _HomepageState extends State<Homepage> {
                     child: CourseCard(
                       index: index,
                     ),
-                    margin: EdgeInsets.all(4.0),
+                    margin: EdgeInsets.only(top: 8.0, left: 8.0),
                   );
                 }),
           ),
