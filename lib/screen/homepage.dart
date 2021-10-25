@@ -2,6 +2,7 @@ import 'package:eparikshya/model/course_model.dart';
 import 'package:eparikshya/sections/course_card_section/course_card_section.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -16,13 +17,16 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
-        title: Text("eparikshya"),
+        title: Text(
+          "Eparikshya",
+          style: GoogleFonts.poppins(),
+        ),
         leading: Icon(Icons.menu),
       ),
       body: ListView(
         children: [
           SizedBox(
-            height: 320,
+            height: 345,
             child: ListView.builder(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,

@@ -19,17 +19,22 @@ class instructor extends StatelessWidget {
             maxRadius: 22,
             backgroundImage: NetworkImage(Courses.course[index].inst_img),
           ),
-          Text(Courses.course[index].inst_name),
+          Text(
+            Courses.course[index].inst_name,
+            style: GoogleFonts.poppins(),
+          ),
           Container(
+            alignment: Alignment.center,
             margin: EdgeInsets.all(4),
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: Colors.amber,
+              color: Color(0xFF07294D),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Text(
               "View Course",
-              style: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 13)),
+              style: GoogleFonts.poppins(
+                  textStyle: TextStyle(fontSize: 13, color: Colors.white)),
             ),
           )
         ],
