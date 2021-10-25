@@ -22,7 +22,12 @@ class Carousel extends StatelessWidget {
                     'http://eparikshya.com/public/frontend/images/slider/s-1.jpg'),
               ),
             ),
-          )
+            // child: Column(
+            //   crossAxisAlignment: CrossAxisAlignment.center,
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [Text("Choose right education")],
+            // ),
+          ),
         ],
         options: CarouselOptions(
           height: 180,
