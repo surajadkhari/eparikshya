@@ -1,4 +1,6 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:eparikshya/model/course_model.dart';
+import 'package:eparikshya/sections/caroisel_section/carousel_slider.dart';
 import 'package:eparikshya/sections/course_card_section/course_card_section.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -24,6 +26,7 @@ class _homeState extends State<home> {
       ),
       body: ListView(
         children: [
+          Carousel(),
           SizedBox(
             height: 345,
             child: ListView.builder(

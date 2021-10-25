@@ -3,7 +3,6 @@ import 'package:eparikshya/sections/course_card_section/course_card_section.dart
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 import 'home.dart';
 
@@ -57,12 +56,19 @@ class _HomepageState extends State<Homepage> {
         //   ],
         // ),
         bottomNavigationBar: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            selectedLabelStyle: GoogleFonts.poppins(fontSize: 12),
+            unselectedLabelStyle: GoogleFonts.poppins(fontSize: 12),
+            selectedItemColor: Color(0xFF07294D),
             currentIndex: _selectedindex,
             onTap: _onItemTapped,
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
               BottomNavigationBarItem(icon: Icon(Icons.book), label: "Courses"),
-              BottomNavigationBarItem(icon: Icon(Icons.save), label: "Saved")
+              BottomNavigationBarItem(icon: Icon(Icons.save), label: "Saved"),
+              BottomNavigationBarItem(icon: Icon(Icons.chat), label: "Chat"),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.person), label: "Account"),
             ]));
   }
 }

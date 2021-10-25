@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screen/homepage.dart';
+import 'screen/selectpgae.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,10 +1,10 @@
 import 'package:eparikshya/model/course_model.dart';
-import 'package:eparikshya/screen/homepage.dart';
+import 'package:eparikshya/screen/selectpgae.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../course_card_instruction_section.dart';
+import 'course_card_instruction_section.dart';
 
 class CourseCard extends StatelessWidget {
   const CourseCard({Key? key, required this.index}) : super(key: key);
