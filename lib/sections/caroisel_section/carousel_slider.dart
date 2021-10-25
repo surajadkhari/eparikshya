@@ -47,7 +47,7 @@ class Carousel extends StatelessWidget {
                             ),
                             Align(
                               alignment: Alignment.bottomLeft,
-                              heightFactor: 3.00,
+                              heightFactor: 3,
                               child: Text(
                                 e.subtitle,
                                 style: GoogleFonts.poppins(
