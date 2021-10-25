@@ -16,7 +16,7 @@ class instructor extends StatelessWidget {
         spacing: 10,
         children: [
           CircleAvatar(
-            maxRadius: 22,
+            maxRadius: 20,
             backgroundImage: NetworkImage(Courses.course[index].inst_img),
           ),
           Text(
@@ -25,7 +25,7 @@ class instructor extends StatelessWidget {
           ),
           Container(
             alignment: Alignment.center,
-            margin: EdgeInsets.all(4),
+            margin: EdgeInsets.all(8),
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
               color: Color(0xFF07294D),
