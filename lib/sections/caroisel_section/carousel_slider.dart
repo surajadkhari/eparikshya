@@ -1,5 +1,5 @@
-
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:eparikshya/model/carusel_model.dart';
 import 'package:flutter/material.dart';
 
 class Carousel extends StatelessWidget {
@@ -12,7 +12,16 @@ class Carousel extends StatelessWidget {
     return CarouselSlider(
         items: [
           Container(
-            color: Colors.red,
+            margin: EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: Color(0xff334E6C).withOpacity(0.5),
+              borderRadius: BorderRadius.circular(10),
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: NetworkImage(
+                    'http://eparikshya.com/public/frontend/images/slider/s-1.jpg'),
+              ),
+            ),
           )
         ],
         options: CarouselOptions(
