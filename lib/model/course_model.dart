@@ -23,6 +23,13 @@ class Courses {
         course_name: "Learn basis javascirpt from start for beginner",
         inst_img:
             'http://eparikshya.com/public/frontend/images/course/teacher/t-1.jpg',
+        inst_name: 'Jaya College'),
+    Courses(
+        course_img:
+            'http://eparikshya.com/public/frontend/images/course/cu-1.jpg',
+        course_name: "Learn basis javascirpt from start for beginner",
+        inst_img:
+            'http://eparikshya.com/public/frontend/images/course/teacher/t-1.jpg',
         inst_name: 'Jaya College')
   ];
 }

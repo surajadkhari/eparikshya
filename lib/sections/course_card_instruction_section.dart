@@ -1,5 +1,6 @@
 import 'package:eparikshya/model/course_model.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class instructor extends StatelessWidget {
   const instructor({Key? key, required this.index}) : super(key: key);
@@ -15,21 +16,22 @@ class instructor extends StatelessWidget {
         spacing: 10,
         children: [
           CircleAvatar(
-            maxRadius: 18,
+            maxRadius: 22,
             backgroundImage: NetworkImage(Courses.course[index].inst_img),
           ),
           Text(Courses.course[index].inst_name),
-          SizedBox(
-            height: 5,
-          ),
-          ElevatedButton(
-            onPressed: () {},
-            child: Text(
-              'View All courese',
-              style: TextStyle(fontSize: 12),
+          Container(
+            margin: EdgeInsets.all(4),
+            padding: EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: Colors.amber,
+              borderRadius: BorderRadius.circular(10),
             ),
-            style: ElevatedButton.styleFrom(),
-          ),
+            child: Text(
+              "View Course",
+              style: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 13)),
+            ),
+          )
         ],
       ),
     );
