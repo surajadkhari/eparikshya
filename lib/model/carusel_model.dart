@@ -1,22 +1,22 @@
-class Carousel {
+class CarouselModel {
   final String backgroundimage;
   final String title;
   final String subtitle;
 
-  Carousel(
+  CarouselModel(
       {required this.backgroundimage,
       required this.subtitle,
       required this.title});
 
-  List<Carousel> caro = [
-    Carousel(
+  static List<CarouselModel> caro = [
+    CarouselModel(
         backgroundimage:
             'http://eparikshya.com/public/frontend/images/slider/s-1.jpg',
         title: 'Choose the Right Theme for Education',
         subtitle: 'subtitle'),
-        Carousel(
+    CarouselModel(
         backgroundimage:
-            'http://eparikshya.com/public/frontend/images/slider/s-1.jpg',
+            'http://eparikshya.com/public/frontend/images/slider/s-2.jpg',
         title: 'Choose the Right Theme for Education',
         subtitle: 'subtitle'),
   ];

@@ -16,7 +16,13 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   int _selectedindex = 0;
 
-  static List<Widget> pages = <Widget>[home(), Container(), Container()];
+  static List<Widget> pages = <Widget>[
+    home(),
+    Container(),
+    Container(),
+    Container(),
+    Container(),
+  ];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -28,13 +34,13 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey,
-        // appBar: AppBar(
-        //   title: Text(
-        //     "Eparikshya",
-        //     style: GoogleFonts.poppins(),
-        //   ),
-        //   leading: Icon(Icons.menu),
-        // ),
+        appBar: AppBar(
+          title: Text(
+            "Eparikshya",
+            style: GoogleFonts.poppins(),
+          ),
+          leading: Icon(Icons.menu),
+        ),
         body: pages[_selectedindex],
         // ListView(
         //   children: [

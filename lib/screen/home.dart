@@ -17,13 +17,13 @@ class _homeState extends State<home> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey,
-      appBar: AppBar(
-        title: Text(
-          "Eparikshya",
-          style: GoogleFonts.poppins(),
-        ),
-        leading: Icon(Icons.menu),
-      ),
+      // appBar: AppBar(
+      //   title: Text(
+      //     "Eparikshya",
+      //     style: GoogleFonts.poppins(),
+      //   ),
+      //   leading: Icon(Icons.menu),
+      // ),
       body: ListView(
         children: [
           Carousel(),
