@@ -1,5 +1,6 @@
 import 'package:eparikshya/model/course_model.dart';
 import 'package:eparikshya/sections/course_card_section/course_card_section.dart';
+import 'package:eparikshya/sections/course_card_section/course_content_videocard.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -36,7 +37,7 @@ class _CoursesPageState extends State<CoursesPage> {
           child: ListView.builder(
               shrinkWrap: true,
               scrollDirection: Axis.vertical,
-              itemCount: Courses.course.length,
+              itemCount: CoursevideoModel.courseVideocard.length,
               itemBuilder: (context, index) {
                 return Container(
                   height: 120,
