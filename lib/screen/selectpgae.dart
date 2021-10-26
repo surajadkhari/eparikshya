@@ -1,4 +1,5 @@
 import 'package:eparikshya/model/course_model.dart';
+import 'package:eparikshya/screen/courses_page.dart';
 import 'package:eparikshya/sections/course_card_section/course_card_section.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class _HomepageState extends State<Homepage> {
 
   static List<Widget> pages = <Widget>[
     home(),
-    Container(),
+    CoursesPage(),
     Container(),
     Container(),
     Container(),

@@ -39,15 +39,18 @@ class Carousel extends StatelessWidget {
                               e.title,
                               style: GoogleFonts.poppins(
                                 textStyle: TextStyle(
-                                    color: Colors.white, fontSize: 16),
+                                    color: Colors.white, fontSize: 14),
                               ),
                               overflow: TextOverflow.visible,
                               maxLines: 2,
                               softWrap: true,
                             ),
+                            SizedBox(
+                              height: 8,
+                            ),
                             Align(
                               alignment: Alignment.bottomLeft,
-                              heightFactor: 3,
+                              heightFactor: 1,
                               child: Text(
                                 e.subtitle,
                                 style: GoogleFonts.poppins(

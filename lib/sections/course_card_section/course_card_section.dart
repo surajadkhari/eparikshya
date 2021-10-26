@@ -44,7 +44,7 @@ class CourseCard extends StatelessWidget {
             margin: EdgeInsets.only(left: 10),
             child: RatingBar.builder(
               initialRating: 3,
-              itemSize: 15,
+              itemSize: 12,
               minRating: 1,
               direction: Axis.horizontal,
               allowHalfRating: true,
