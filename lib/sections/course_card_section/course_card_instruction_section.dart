@@ -10,23 +10,24 @@ class instructor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10),
+      margin: EdgeInsets.all(8),
       child: Wrap(
         crossAxisAlignment: WrapCrossAlignment.center,
         spacing: 10,
         children: [
           CircleAvatar(
-            maxRadius: 20,
+            // maxRadius: 20,
+            maxRadius: 12,
             backgroundImage: NetworkImage(Courses.course[index].inst_img),
           ),
-          Text(
-            Courses.course[index].inst_name,
-            style: GoogleFonts.poppins(),
-          ),
+          Text(Courses.course[index].inst_name,
+              style: GoogleFonts.poppins(
+                textStyle: TextStyle(fontSize: 10),
+              )),
           Container(
             alignment: Alignment.center,
-            margin: EdgeInsets.all(8),
-            padding: EdgeInsets.all(8),
+            margin: EdgeInsets.all(7),
+            padding: EdgeInsets.all(7),
             decoration: BoxDecoration(
               color: Color(0xFF07294D),
               borderRadius: BorderRadius.circular(10),
@@ -34,7 +35,9 @@ class instructor extends StatelessWidget {
             child: Text(
               "View Course",
               style: GoogleFonts.poppins(
-                  textStyle: TextStyle(fontSize: 13, color: Colors.white)),
+                // textStyle: TextStyle(fontSize: 13, color: Colors.white),
+                textStyle: TextStyle(fontSize: 10, color: Colors.white),
+              ),
             ),
           )
         ],

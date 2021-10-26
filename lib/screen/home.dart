@@ -29,7 +29,8 @@ class _homeState extends State<home> {
         children: [
           Carousel(),
           SizedBox(
-            height: 345,
+            height: 265,
+            //345
             child: ListView.builder(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
@@ -43,7 +44,6 @@ class _homeState extends State<home> {
                   );
                 }),
           ),
-        
         ],
       ),
     );

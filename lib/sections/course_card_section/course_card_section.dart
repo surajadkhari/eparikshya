@@ -13,8 +13,10 @@ class CourseCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
-      width: 208,
+      // height: 300,
+      // width: 208,
+      // height: 300,
+      width: 160,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
         color: Colors.white,
@@ -37,14 +39,17 @@ class CourseCard extends StatelessWidget {
               // style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0),
               style: GoogleFonts.poppins(
                   textStyle:
-                      TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
+                      // TextStyle(fontSize: 14, fontWeight: FontWeight.w600)
+                      TextStyle(fontSize: 10, fontWeight: FontWeight.w600)),
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 10),
+            // margin: EdgeInsets.only(left: 10),
+            margin: EdgeInsets.only(left: 8),
             child: RatingBar.builder(
               initialRating: 3,
-              itemSize: 12,
+              // itemSize: 12,
+              itemSize: 8,
               minRating: 1,
               direction: Axis.horizontal,
               allowHalfRating: true,
@@ -60,7 +65,7 @@ class CourseCard extends StatelessWidget {
             ),
           ),
           const Divider(
-            thickness: 2,
+            thickness: 1.5,
             indent: 20.0,
             endIndent: 20.0,
           ),
