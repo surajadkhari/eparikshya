@@ -32,69 +32,121 @@ class _CoursesPageState extends State<CoursesPage> {
             child: TextformfieldWidget(),
           ),
         ),
-        SizedBox(
-          height: 345,
-          child: ListView.builder(
-              shrinkWrap: true,
-              scrollDirection: Axis.vertical,
-              itemCount: CoursevideoModel.courseVideocard.length,
-              itemBuilder: (context, index) {
-                return Container(
-                  height: 120,
-                  margin: EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.grey,
-                  ),
-                  child: Row(
-                    children: [
-                      Expanded(
+        Expanded(
+          child: SizedBox(
+            height: 390,
+            child: ListView.builder(
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                itemCount: CoursevideoModel.courseVideocard.length,
+                itemBuilder: (context, index) {
+                  return Container(
+                    height: 120,
+                    margin: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Colors.white,
+                    ),
+                    child: Row(
+                      children: [
+                        Expanded(
                           child: Stack(
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(5),
-                                    bottomLeft: Radius.circular(5)),
-                                color: Colors.red,
-                                image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image: NetworkImage(
-                                      'http://eparikshya.com/public/frontend/images/course/cu-4.jpg'),
-                                )),
+                            children: [
+                              Container(
+                                width: 180,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(5),
+                                        bottomLeft: Radius.circular(5)),
+                                    color: Colors.red,
+                                    image: DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: NetworkImage(CoursevideoModel
+                                          .courseVideocard[index].videoimg),
+                                    )),
+                              ),
+                              Container(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 5, horizontal: 5),
+                                margin: EdgeInsets.only(
+                                  top: 95,
+                                  left: 8,
+                                ),
+                                decoration: BoxDecoration(
+                                    color: Colors.black.withOpacity(0.5)),
+                                child: Text(
+                                  '47.1l Views',
+                                  style: GoogleFonts.poppins(
+                                      color: Colors.white, fontSize: 12),
+                                ),
+                              )
+                            ],
                           ),
-                          Container(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 5, horizontal: 5),
-                            margin: EdgeInsets.only(
-                              top: 95,
-                              left: 8,
-                            ),
-                            decoration: BoxDecoration(
-                                color: Colors.black.withOpacity(0.255)),
-                            child: Text(
-                              '47.1l Views',
-                              style: GoogleFonts.poppins(
-                                  color: Colors.white, fontSize: 12),
-                            ),
-                          )
-                        ],
-                      )),
-                      Expanded(
-                          child: Container(
-                        margin: EdgeInsets.all(4.0),
-                        child: Column(
-                          children: [
-                            Text("Hot to scale up your Business",
-                                style: GoogleFonts.poppins(
-                                    color: Colors.black, fontSize: 12))
-                          ],
                         ),
-                      ))
-                    ],
-                  ),
-                );
-              }),
+                        Expanded(
+                            child: Container(
+                          margin: EdgeInsets.all(8),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                CoursevideoModel.courseVideocard[index].tile,
+                                style: GoogleFonts.poppins(
+                                    color: Colors.black, fontSize: 13),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Icon(
+                                    Icons.timelapse,
+                                    size: 18,
+                                    color: Colors.grey,
+                                  ),
+                                  SizedBox(
+                                    width: 8,
+                                  ),
+                                  Text(
+                                      CoursevideoModel
+                                          .courseVideocard[index].time,
+                                      style: GoogleFonts.poppins()),
+                                  SizedBox(
+                                    width: 8,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    size: 18,
+                                  ),
+                                  SizedBox(
+                                    width: 8,
+                                  ),
+                                  Text(
+                                      CoursevideoModel
+                                          .courseVideocard[index].ratingvalue,
+                                      style: GoogleFonts.poppins()),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                CoursevideoModel
+                                    .courseVideocard[index].instructor,
+                                style: GoogleFonts.poppins(
+                                    textStyle: TextStyle(
+                                        color: Colors.black, fontSize: 12)),
+                              )
+                            ],
+                          ),
+                        ))
+                      ],
+                    ),
+                  );
+                }),
+          ),
         ),
       ],
     ));
@@ -105,16 +157,17 @@ class _CoursesPageState extends State<CoursesPage> {
       decoration: InputDecoration(
           contentPadding: const EdgeInsets.symmetric(vertical: 6.0),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(color: Color(0xFFD6D6D6)),
-          ),
+              borderRadius: BorderRadius.circular(8),
+              borderSide: BorderSide(
+                color: Colors.white,
+              )),
           fillColor: Colors.grey[200],
           filled: true,
           hintText: "Enter your query here",
           hintStyle: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 13)),
           prefixIcon: Icon(
             Icons.search,
-            size: 15,
+            size: 16,
           )),
     );
   }
