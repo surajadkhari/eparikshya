@@ -17,7 +17,7 @@ class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.grey.shade200,
       // appBar: AppBar(
       //   title: Text(
       //     "Eparikshya",
@@ -26,6 +26,7 @@ class _homeState extends State<home> {
       //   leading: Icon(Icons.menu),
       // ),
       body: ListView(
+        scrollDirection: Axis.vertical,
         children: [
           Carousel(),
           SizedBox(
@@ -43,6 +44,34 @@ class _homeState extends State<home> {
                     margin: EdgeInsets.only(top: 8.0, left: 8.0),
                   );
                 }),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Text('Top Categories',
+                style: GoogleFonts.poppins(
+                  textStyle:
+                      TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
+                )),
+          ),
+          SizedBox(
+            height: 100,
+            child: GridView(
+              scrollDirection: Axis.vertical,
+              gridDelegate:
+                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+              children: [
+                Container(
+                  color: Colors.blue,
+                ),
+                Container(color: Colors.red),
+                Container(
+                  color: Colors.green,
+                ),
+                Container(
+                  color: Colors.black,
+                )
+              ],
+            ),
           ),
         ],
       ),
