@@ -1,5 +1,7 @@
 import 'package:eparikshya/const/color_const.dart';
+import 'package:eparikshya/sections/coursedetail_pagesection/course_courseincludes_section.dart';
 import 'package:eparikshya/sections/coursedetail_pagesection/course_description_section.dart';
+import 'package:eparikshya/sections/coursedetail_pagesection/course_requirement_section.dart';
 import 'package:eparikshya/sections/coursedetail_pagesection/course_whatyoulearn_section.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -94,11 +96,16 @@ class CourseDetail extends StatelessWidget {
                       child: YourleanSection(),
                     ),
                     Container(child: Text('Cirriculum')),
-                    Container(child: Text('This course includes')),
-                    Container(child: Text('Requirement'))
+                    Container(child: CourseincludeSection()),
+                    Container(child: CourserequirementSection())
                   ],
                 ),
-              )
+              ),
+              SliverList(delegate: SliverChildBuilderDelegate((context, index) {
+                Container(
+                  child: CircleAvatar(),
+                );
+              }))
             ],
           ))),
     );

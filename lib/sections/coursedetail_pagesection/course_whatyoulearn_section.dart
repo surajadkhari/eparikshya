@@ -21,12 +21,12 @@ class YourleanSection extends StatelessWidget {
           SizedBox(
             height: 300,
             child: ListView.builder(
-              
                 physics: BouncingScrollPhysics(),
                 itemCount: 8,
                 itemBuilder: (context, index) {
                   return Wrap(
-
+                    spacing: 10,
+                    
                     children: [
                       Icon(Icons.check),
                       Text(
