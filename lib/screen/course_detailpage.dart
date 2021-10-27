@@ -1,5 +1,6 @@
 import 'package:eparikshya/const/color_const.dart';
 import 'package:eparikshya/sections/coursedetail_pagesection/course_description_section.dart';
+import 'package:eparikshya/sections/coursedetail_pagesection/course_whatyoulearn_section.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -90,7 +91,7 @@ class CourseDetail extends StatelessWidget {
                       child: DescrptionSection(),
                     ),
                     Container(
-                      child: Text('What you will learn'),
+                      child: YourleanSection(),
                     ),
                     Container(child: Text('Cirriculum')),
                     Container(child: Text('This course includes')),

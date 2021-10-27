@@ -1,3 +1,4 @@
+import 'package:eparikshya/const/color_const.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -69,7 +70,7 @@ class DescrptionSection extends StatelessWidget {
               children: [
                 Icon(Icons.subtitles_outlined),
                 Text(
-                  'English,French',
+                  'English,French, 5 more',
                   style: GoogleFonts.poppins(),
                 )
               ],
@@ -84,8 +85,9 @@ class DescrptionSection extends StatelessWidget {
               children: [
                 Expanded(
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(primary: KappColor),
                     onPressed: () {},
-                    child: Text('Buy Now'),
+                    child: Text('Buy Now', style: GoogleFonts.poppins()),
                   ),
                 ),
               ],
@@ -93,15 +95,28 @@ class DescrptionSection extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                    child: Container(
-                  height: 50,
-                  color: Colors.red,
-                )),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        primary: Colors.white,
+                        side: BorderSide(color: Colors.white, width: 0.5)),
+                    onPressed: () {},
+                    child: Text('Add to cart',
+                        style: GoogleFonts.poppins(color: Colors.black)),
+                  ),
+                ),
                 Expanded(
-                    child: Container(
-                  height: 50,
-                  color: Colors.green,
-                ))
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white,
+                        side: BorderSide(color: KappColor, width: 0.5),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        'Add to wishlsit',
+                        style: GoogleFonts.poppins(
+                            textStyle: TextStyle(color: Colors.black)),
+                      )),
+                )
               ],
             )
           ],
