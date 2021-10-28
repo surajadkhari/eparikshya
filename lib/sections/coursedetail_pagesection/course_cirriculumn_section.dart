@@ -42,8 +42,10 @@ class CirriculumSection extends StatelessWidget {
           shrinkWrap: true,
           children: [
             Text(
-              "Master Python by building 100 project in 100 days.Learn to build websites,games,apps,plus scraping and data science",
-              style: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 13)),
+              "Cirriculum",
+              style: GoogleFonts.poppins(
+                  textStyle:
+                      TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
             ),
             SizedBox(
               height: 8,
@@ -52,21 +54,29 @@ class CirriculumSection extends StatelessWidget {
                 shrinkWrap: true,
                 itemCount: 8,
                 itemBuilder: (context, index) {
-                  return Wrap(
-                    spacing: 10,
-                    children: [
-                      Icon(
-                        Icons.check,
-                        size: 12,
-                      ),
-                      Text(
-                        'Be able to program in Python professionally',
+                  return
+                      //  Wrap(
+                      //   spacing: 10,
+                      //   children: [
+                      //     Icon(
+                      //       Icons.check,
+                      //       size: 12,
+                      //     ),
+                      //     Text(
+                      //       'Be able to program in Python professionally',
+                      //       style: GoogleFonts.poppins(
+                      //           textStyle: TextStyle(fontSize: 13)),
+                      //     )
+                      //   ],
+                      // );
+                      ExpansionTile(
+                        
+                    title: Text(
+                        'Section 1-Day 1- Beginner -Working with Variables in Pythone to manage data',
                         style: GoogleFonts.poppins(
-                            textStyle: TextStyle(fontSize: 13)),
-                      )
-                    ],
+                            textStyle: TextStyle(fontSize: 12))),
                   );
-                })
+                }),
           ],
         ));
   }

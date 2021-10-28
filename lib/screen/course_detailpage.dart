@@ -49,6 +49,8 @@ class CourseDetail extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(8),
       child: ListView(
+        scrollDirection: Axis.vertical,
+        physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         children: [
           Container(
