@@ -53,26 +53,26 @@ class _homeState extends State<home> {
                       TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
                 )),
           ),
-          SizedBox(
-            height: 100,
-            child: GridView(
-              scrollDirection: Axis.vertical,
-              gridDelegate:
-                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-              children: [
-                Container(
-                  color: Colors.blue,
-                ),
-                Container(color: Colors.red),
-                Container(
-                  color: Colors.green,
-                ),
-                Container(
-                  color: Colors.black,
-                )
-              ],
-            ),
-          ),
+          // SizedBox(
+          //   height: 100,
+          //   child: GridView(
+          //     scrollDirection: Axis.vertical,
+          //     gridDelegate:
+          //         SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+          //     children: [
+          //       Container(
+          //         color: Colors.blue,
+          //       ),
+          //       Container(color: Colors.red),
+          //       Container(
+          //         color: Colors.green,
+          //       ),
+          //       Container(
+          //         color: Colors.black,
+          //       )
+          //     ],
+          //   ),
+          // ),
         ],
       ),
     );

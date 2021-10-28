@@ -9,24 +9,45 @@ class DescrptionSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.all(8),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        margin: EdgeInsets.all(10),
+        child: ListView(
+          // crossAxisAlignment: CrossAxisAlignment.start,
+          physics: NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
           children: [
             Text(
               "Master Python by building 100 project in 100 days.Learn to build websites,games,apps,plus scraping and data science",
-              style: GoogleFonts.poppins(),
-              textAlign: TextAlign.justify,
+              style: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 13)),
             ),
-            Container(
-              color: Colors.yellow,
-              child: Text('Best seller'),
+            SizedBox(
+              height: 8,
+            ),
+            Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Container(
+                height: 25,
+                padding: EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                    color: KappColor, borderRadius: BorderRadius.circular(6)),
+                child: Text('Best seller',
+                    style: GoogleFonts.poppins(
+                      textStyle: TextStyle(
+                          fontSize: 12,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500),
+                    )),
+              ),
+            ]),
+            SizedBox(
+              height: 3,
             ),
             Wrap(
+              spacing: 8,
               children: [
-                Text('4.7 '),
+                Text('4.7 ',
+                    style: GoogleFonts.poppins(
+                        textStyle: TextStyle(fontSize: 12))),
                 RatingBar.builder(
-                  itemSize: 20.0,
+                  itemSize: 14.0,
                   initialRating: 3,
                   minRating: 1,
                   direction: Axis.horizontal,
@@ -44,34 +65,61 @@ class DescrptionSection extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(
+              height: 3,
+            ),
             Text(
               '(55,835 ratings),252059 students',
-              style: GoogleFonts.poppins(),
+              style: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 12)),
+            ),
+            SizedBox(
+              height: 3,
             ),
             Wrap(
+              spacing: 8,
               children: [
-                Icon(Icons.update),
+                Icon(
+                  Icons.update,
+                  size: 20,
+                ),
                 Text(
                   'Last updated 02/2021',
-                  style: GoogleFonts.poppins(),
+                  style:
+                      GoogleFonts.poppins(textStyle: TextStyle(fontSize: 12)),
                 )
               ],
             ),
+            SizedBox(
+              height: 3,
+            ),
             Wrap(
+              spacing: 8,
               children: [
-                Icon(Icons.language),
+                Icon(
+                  Icons.language,
+                  size: 20,
+                ),
                 Text(
                   'English',
-                  style: GoogleFonts.poppins(),
+                  style:
+                      GoogleFonts.poppins(textStyle: TextStyle(fontSize: 12)),
                 )
               ],
             ),
+            SizedBox(
+              height: 3,
+            ),
             Wrap(
+              spacing: 8,
               children: [
-                Icon(Icons.subtitles_outlined),
+                Icon(
+                  Icons.subtitles_outlined,
+                  size: 20,
+                ),
                 Text(
                   'English,French, 5 more',
-                  style: GoogleFonts.poppins(),
+                  style:
+                      GoogleFonts.poppins(textStyle: TextStyle(fontSize: 12)),
                 )
               ],
             ),
@@ -79,7 +127,7 @@ class DescrptionSection extends StatelessWidget {
               'US\$90.0',
               style: GoogleFonts.poppins(
                   textStyle:
-                      TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+                      TextStyle(fontSize: 19, fontWeight: FontWeight.bold)),
             ),
             Row(
               children: [
@@ -87,7 +135,9 @@ class DescrptionSection extends StatelessWidget {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(primary: KappColor),
                     onPressed: () {},
-                    child: Text('Buy Now', style: GoogleFonts.poppins()),
+                    child: Text('Buy Now',
+                        style: GoogleFonts.poppins(
+                            textStyle: TextStyle(fontSize: 14))),
                   ),
                 ),
               ],
@@ -96,13 +146,14 @@ class DescrptionSection extends StatelessWidget {
               children: [
                 Expanded(
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
-                        side: BorderSide(color: Colors.white, width: 0.5)),
-                    onPressed: () {},
-                    child: Text('Add to cart',
-                        style: GoogleFonts.poppins(color: Colors.black)),
-                  ),
+                      style: ElevatedButton.styleFrom(
+                          primary: Colors.white,
+                          side: BorderSide(color: Colors.white, width: 0.5)),
+                      onPressed: () {},
+                      child: Text('Add to cart',
+                          style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
+                                  fontSize: 14, color: Colors.black)))),
                 ),
                 Expanded(
                   child: ElevatedButton(
@@ -114,7 +165,8 @@ class DescrptionSection extends StatelessWidget {
                       child: Text(
                         'Add to wishlsit',
                         style: GoogleFonts.poppins(
-                            textStyle: TextStyle(color: Colors.black)),
+                            textStyle:
+                                TextStyle(fontSize: 14, color: Colors.black)),
                       )),
                 )
               ],
