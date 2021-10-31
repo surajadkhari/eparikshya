@@ -142,11 +142,15 @@ class DescrptionSection extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(
+              height: 4,
+            ),
             Row(
               children: [
                 Expanded(
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
+                          elevation: 1,
                           primary: Colors.white,
                           side: BorderSide(color: Colors.white, width: 0.5)),
                       onPressed: () {},
@@ -158,6 +162,7 @@ class DescrptionSection extends StatelessWidget {
                 Expanded(
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
+                        elevation: 1,
                         primary: Colors.white,
                         side: BorderSide(color: KappColor, width: 0.5),
                       ),

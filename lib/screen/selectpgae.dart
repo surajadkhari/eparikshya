@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'home.dart';
+import 'user_profile.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class _HomepageState extends State<Homepage> {
     CoursesPage(),
     Container(),
     Container(),
-    Container(),
+    UserProfile(),
   ];
 
   void _onItemTapped(int index) {

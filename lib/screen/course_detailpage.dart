@@ -4,7 +4,9 @@ import 'package:eparikshya/sections/coursedetail_pagesection/course_courseinclud
 import 'package:eparikshya/sections/coursedetail_pagesection/course_description_section.dart';
 import 'package:eparikshya/sections/coursedetail_pagesection/course_requirement_section.dart';
 import 'package:eparikshya/sections/coursedetail_pagesection/course_whatyoulearn_section.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CourseDetail extends StatelessWidget {
@@ -17,6 +19,7 @@ class CourseDetail extends StatelessWidget {
           length: 5,
           child: Scaffold(
               body: CustomScrollView(
+            shrinkWrap: true,
             slivers: <Widget>[
               sliverAppBar(),
               SliverToBoxAdapter(
@@ -37,7 +40,7 @@ class CourseDetail extends StatelessWidget {
                   ),
                 ),
               ),
-              SliverFillRemaining(
+              SliverToBoxAdapter(
                 child: InstructionDetail(),
               )
             ],
@@ -45,75 +48,82 @@ class CourseDetail extends StatelessWidget {
     );
   }
 
+//instruction
   Container InstructionDetail() {
     return Container(
-      margin: EdgeInsets.all(8),
-      child: ListView(
-        scrollDirection: Axis.vertical,
-        physics: NeverScrollableScrollPhysics(),
-        shrinkWrap: true,
-        children: [
-          Container(
-            margin: EdgeInsets.symmetric(vertical: 30),
-            padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-            decoration: BoxDecoration(
-                color: KappColor, borderRadius: BorderRadius.circular(8)),
-            child: Wrap(
-              // crossAxisAlignment: CrossAxisAlignment.center,
-              spacing: 20,
-              crossAxisAlignment: WrapCrossAlignment.center,
-              children: [
-                CircleAvatar(
-                  radius: 48,
-                  backgroundColor: Colors.white,
-                  child: CircleAvatar(
-                    radius: 45,
-                    backgroundImage: NetworkImage(
-                        'https://avatars.githubusercontent.com/u/8798027?v=4'),
+        margin: EdgeInsets.all(8),
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          physics: NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          children: [
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 30),
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              decoration: BoxDecoration(
+                  color: KappColor, borderRadius: BorderRadius.circular(12)),
+              child: Wrap(
+                // crossAxisAlignment: CrossAxisAlignment.center,
+                spacing: 20,
+                crossAxisAlignment: WrapCrossAlignment.center,
+                children: [
+                  CircleAvatar(
+                    radius: 32,
+                    backgroundColor: Colors.white,
+                    child: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: NetworkImage(
+                          'https://avatars.githubusercontent.com/u/8798027?v=4'),
+                    ),
                   ),
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Instructor",
-                      style: GoogleFonts.poppins(
-                        textStyle: TextStyle(fontSize: 12, color: Colors.white),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Instructor",
+                        style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                              fontSize: 11,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
-                    ),
-                    Text(
-                      "Dr  Angela Yu",
-                      style: GoogleFonts.poppins(
-                        textStyle: TextStyle(fontSize: 12, color: Colors.white),
+                      Text(
+                        "Dr  Angela Yu",
+                        style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                              fontSize: 11,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
-                    ),
-                    Text(
-                      "Developer and Lead instructor",
-                      style: GoogleFonts.poppins(
-                        textStyle: TextStyle(fontSize: 12, color: Colors.white),
+                      Text(
+                        "Developer and Lead instructor",
+                        style: GoogleFonts.poppins(
+                          textStyle:
+                              TextStyle(fontSize: 11, color: Colors.white),
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-          Text(
-              '''I'm Angela, I am a developer with a passion for teaching. I'm the lead instructor at the London App Brewery, London's leading Programming Bootcamp. I've helped hundreds of thousands of students learn to code and change their lives by becoming a developer. I've been invited by companies such as Twitter, Facebook and Google to teach their employees.
+            Text(
+                '''I'm Angela, I am a developer with a passion for teaching. I'm the lead instructor at the London App Brewery, London's leading Programming Bootcamp. I've helped hundreds of thousands of students learn to code and change their lives by becoming a developer. I've been invited by companies such as Twitter, Facebook and Google to teach their employees.
 
 My first foray into programming was when I was just 12 years old, wanting to build my own Space Invader game. Since then, I've made hundred of websites, apps and games. But most importantly, I realised that my greatest passion is teaching.
 
 I spend most of my time researching how to make learning to code fun and make hard concepts easy to understand. I apply everything I discover into my bootcamp courses. In my courses, you'll find lots of geeky humour but also lots of explanations and animations to make sure everything is easy to understand.
 
 I'll be there for you every step of the way.
-                          ''',
-              style: GoogleFonts.poppins(
-                textStyle: TextStyle(fontSize: 13),
-              ),
-              textAlign: TextAlign.justify)
-        ],
-      ),
-    );
+                              ''',
+                style: GoogleFonts.poppins(
+                  textStyle: TextStyle(fontSize: 13),
+                ),
+                textAlign: TextAlign.justify),
+          ],
+        ));
   }
 
 //SliverAppbar
@@ -147,7 +157,7 @@ I'll be there for you every step of the way.
     return Container(
       color: KappColor,
       child: TabBar(
-        labelStyle: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 11)),
+        labelStyle: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 13)),
         physics: BouncingScrollPhysics(),
         // indicatorColor: Color(0x00ffc600),
         indicatorColor: Colors.yellow,
@@ -200,7 +210,7 @@ I'll be there for you every step of the way.
           Text(
             '100 Days of Code - the Complete Python Pro Bootcamp for 2021',
             style: GoogleFonts.poppins(
-                fontWeight: FontWeight.w500, color: Colors.black, fontSize: 14),
+                fontWeight: FontWeight.w600, color: Colors.black, fontSize: 15),
           ),
         ],
       ),
